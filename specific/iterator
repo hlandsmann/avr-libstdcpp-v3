@@ -63,7 +63,10 @@
 #include <bits/stl_iterator.h>
 #include <iosfwd>
 #include <bits/stream_iterator.h>
-#include <bits/streambuf_iterator.h>
+
+/* Removing the stream buf iterator - so that locale doesn't get in. Fixes compile error */
+// #include <bits/streambuf_iterator.h>
+
 #include <bits/range_access.h>
 
 #if __cplusplus >= 201402L && ! defined _GLIBCXX_DEBUG // PR libstdc++/70303
